@@ -1,7 +1,8 @@
 <com.example.xyzreader.ui.DrawInsetsFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/draw_insets_frame_layout"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
+                                                xmlns:app="http://schemas.android.com/apk/res-auto"
+                                                android:id="@+id/draw_insets_frame_layout"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="match_parent">
 
     <com.example.xyzreader.ui.ObservableScrollView
         android:id="@+id/scrollview"
@@ -90,7 +91,18 @@
         </LinearLayout>
     </com.example.xyzreader.ui.ObservableScrollView>
 
-    <ImageButton android:id="@+id/share_fab"
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/share_fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/fab_margin"
+        android:src="@drawable/ic_share"
+        app:layout_anchor="@id/app_bar"
+        app:layout_anchorGravity="bottom|end"
+        android:layout_gravity="bottom|end"/>
+
+<!--    <ImageButton android:id="@+id/share_fab"
         android:stateListAnimator="@anim/fab_state_list_anim"
         android:background="@drawable/add_fab_background"
         android:layout_gravity="bottom|end"
@@ -99,6 +111,6 @@
         android:layout_width="56dp"
         android:layout_height="56dp"
         android:src="@drawable/ic_share"
-        android:contentDescription="@string/action_share" />
+        android:contentDescription="@string/action_share" />-->
 
 </com.example.xyzreader.ui.DrawInsetsFrameLayout>
